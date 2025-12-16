@@ -1,5 +1,6 @@
 :root {
-    --main-red: #ce0000;
+    --main-red: #FF007F;
+    /* Hot Pink */
     --bg-color: #f8f8f8;
     /* Off-white/Grainy look */
     --text-dark: #ce0000;
@@ -340,6 +341,70 @@ h3 {
 
 .sub-title.small-text {
     font-size: 5rem;
+}
+
+/* Marquee Effect */
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: var(--main-red);
+    color: white;
+    padding: 1rem 0;
+    margin-top: auto;
+    /* Push to bottom of section if needed */
+    position: absolute;
+    bottom: 0;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+}
+
+.marquee-item {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    font-family: "Archivo Black", sans-serif;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Closing Socials */
+.closing-socials {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    z-index: 2;
+}
+
+.social-link {
+    text-decoration: none;
+    color: var(--main-red);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 2px solid var(--main-red);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.social-link:hover {
+    background: var(--main-red);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 127, 0.3);
 }
 
 /* Footer */
