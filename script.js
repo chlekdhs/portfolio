@@ -1,51 +1,21 @@
-console.log('Portfolio initialized.');
+document.addEventListener('DOMContentLoaded', () => {
+    // Parallax Effect for floating elements
+    document.addEventListener('mousemove', (e) => {
+        const cubes = document.querySelectorAll('.cube');
+        const x = (window.innerWidth - e.pageX * 2) / 100;
+        const y = (window.innerHeight - e.pageY * 2) / 100;
 
-// Cursor Follower
-const cursor = document.getElementById('cursor-follower');
-document.addEventListener('mousemove', (e) => {
-    if (cursor) {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    }
-});
-
-document.addEventListener('mousedown', () => {
-    if (cursor) cursor.style.transform = 'translate(-50%, -50%) scale(0.8)';
-});
-
-document.addEventListener('mouseup', () => {
-    if (cursor) cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-});
-
-// Scroll Animation Observer
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px"
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show-section');
-            observer.unobserve(entry.target); // Animate only once
-        }
+        cubes.forEach((cube, index) => {
+            const speed = (index + 1) * 0.5; // Different speeds
+            cube.style.transform = `translateX(${x * speed}px) translateY(${y * speed}px)`;
+        });
     });
-}, observerOptions);
 
-const hiddenElements = document.querySelectorAll('.section, .hero');
-hiddenElements.forEach((el) => {
-    el.classList.add('hidden-section');
-    observer.observe(el);
-});
+    // Smooth Scroll for "Scroll for Works"
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    scrollIndicator.addEventListener('click', () => {
+        document.getElementById('works').scrollIntoView({ behavior: 'smooth' });
+    });
 
-// Navbar Scroll Effect
-const navbar = document.querySelector('.navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(5, 5, 5, 0.95)';
-        navbar.style.boxShadow = '0 10px 30px -10px rgba(0,0,0,0.5)';
-    } else {
-        navbar.style.background = 'rgba(5, 5, 5, 0.8)';
-        navbar.style.boxShadow = 'none';
-    }
+    console.log("Dreamy Portfolio Loaded ✨");
 });
