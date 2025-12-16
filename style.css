@@ -63,36 +63,43 @@ header {
 
 .cube {
     position: absolute;
-    width: 80px;
+    width: 150px;
+    /* Increased size */
     filter: drop-shadow(0 10px 15px rgba(255, 105, 180, 0.2));
     opacity: 0.9;
     animation: float 6s ease-in-out infinite;
+    mix-blend-mode: multiply;
+    /* Ensure white background is blended */
 }
 
 .cube-1 {
     top: 20%;
-    left: 15%;
+    left: 10%;
+    /* Adjusted for larger size */
     animation-delay: 0s;
 }
 
 /* PS */
 .cube-2 {
     top: 15%;
-    right: 18%;
+    right: 12%;
+    /* Adjusted for larger size */
     animation-delay: 2s;
 }
 
 /* AI */
 .cube-3 {
     bottom: 25%;
-    left: 20%;
+    left: 15%;
+    /* Adjusted for larger size */
     animation-delay: 1s;
 }
 
 /* ID */
 .cube-4 {
     bottom: 30%;
-    right: 15%;
+    right: 10%;
+    /* Adjusted for larger size */
     animation-delay: 3s;
 }
 
@@ -111,6 +118,8 @@ header {
     position: relative;
     z-index: 10;
     margin-bottom: -50px;
+    margin-top: 100px;
+    /* Moved down to avoid being cut off */
     /* Overlap with avatar */
 }
 
@@ -118,7 +127,8 @@ header {
     width: 800px;
     max-width: 90vw;
     animation: float-slow 8s ease-in-out infinite;
-    mix-blend-mode: normal;
+    mix-blend-mode: multiply;
+    /* Changed to multiply to remove white box */
     /* Title might look better normal if transparent png */
 }
 
@@ -133,6 +143,8 @@ header {
     background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
     filter: blur(20px);
     z-index: -1;
+    display: none;
+    /* Removed white background glow */
 }
 
 .hero-info {
