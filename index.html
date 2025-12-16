@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Creative Developer</title>
+    <meta name="description" content="A premium portfolio showcasing creative development work.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">PORTFOLIO<span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Digital <span class="gradient-text">Experiences</span><br>
+                    That Matter
+                </h1>
+                <p class="hero-subtitle">Building premium web applications with modern technologies.</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn primary">View Work</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-background">
+                <div class="glow-orb orb-1"></div>
+                <div class="glow-orb orb-2"></div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>I am a passionate developer focused on creating immersive digital experiences. With a keen eye for details and a love for clean code, I build solutions that solve real-world problems.</p>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
+                        <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                        <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="skill-item"><i class="fab fa-react"></i> React</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Selected Work</h2>
+                <div class="projects-grid">
+                    <!-- Project Cards will go here -->
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-info">
+                            <h3>E-Commerce Platform</h3>
+                            <p>A modern shopping experience with seamless checkout.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-info">
+                            <h3>Finance Dashboard</h3>
+                            <p>Real-time data visualization for financial insights.</p>
+                            <div class="project-tags">
+                                <span>Vue</span>
+                                <span>D3.js</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-image"></div>
+                        <div class="project-info">
+                            <h3>Social App</h3>
+                            <p>Connecting people through shared interests.</p>
+                            <div class="project-tags">
+                                <span>Mobile</span>
+                                <span>Flutter</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p>Interested in working together? Let's talk.</p>
+                    <a href="mailto:hello@example.com" class="btn primary">Send Email</a>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
